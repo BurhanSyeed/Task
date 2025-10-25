@@ -4,19 +4,19 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot> --}}
-
+   
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div
                 class="w-full max-w-sm p-4 border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-    
+
                 <form class="space-y-6" action="{{ route('product.update', $product->id) }}" method="POST"
                     autocomplete="off">
                     @csrf
                     @method('PUT')
-    
+
                     <h5 class="text-xl font-medium text-gray-900 dark:text-white">Edit Product</h5>
-    
+
                     <div>
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Name
@@ -28,7 +28,7 @@
                             <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
                         @enderror
                     </div>
-    
+
                     <div>
                         <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Price
@@ -40,9 +40,10 @@
                             <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
                         @enderror
                     </div>
-    
+
                     <div>
-                        <button type="submit" class="bg-blue-700 text-dark px-4 py-2 rounded hover:bg-blue-800 transition">
+                        <button type="submit"
+                            class="bg-blue-700 text-dark px-4 py-2 rounded hover:bg-blue-800 transition">
                             Update Product
                         </button>
                     </div>

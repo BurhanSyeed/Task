@@ -117,6 +117,6 @@ class ProductController extends Controller
 
         return $request->expectsJson()
             ? response()->json($response, 200)
-            : redirect("product")->with('success', 'Product deleted successfully.');
+            : redirect("product")->with('status', 'Product deleted successfully.');
     }
 }
