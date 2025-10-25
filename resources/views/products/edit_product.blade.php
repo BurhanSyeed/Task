@@ -1,15 +1,6 @@
-<x-app-layout>
-    {{-- <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot> --}}
-   
+<x-app-layout>   
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div
-                class="w-full max-w-sm p-4 border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-
                 <form class="space-y-6" action="{{ route('product.update', $product->id) }}" method="POST"
                     autocomplete="off">
                     @csrf
@@ -43,12 +34,11 @@
 
                     <div>
                         <button type="submit"
-                            class="bg-blue-700 text-dark px-4 py-2 rounded hover:bg-blue-800 transition">
+                            class="text-white bg-blue-600 px-5 py-2.5 rounded-lg">
                             Update Product
                         </button>
                     </div>
                 </form>
-            </div>
         </div>
     </div>
 </x-app-layout>

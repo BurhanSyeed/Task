@@ -6,17 +6,17 @@
     </x-slot> --}}
     <div>
         @if(session('success'))
-            <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <div class="text-white bg-green-600 px-5 py-2.5">
                 {{ session('success') }}
             </div>
         @endif
         @if(session('status'))
-            <div class="p-4 mb-4 text-sm !text-green-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <div class="text-white bg-green-600 px-5 py-2.5 ">
                 {{ session('status') }}
             </div>
         @endif
         @if(session('error'))
-            <div class="p-4 mb-4 text-sm !text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <div class="text-white bg-red-600 px-5 py-2.5 ">
                 {{ session('error') }}
             </div>
         @endif
@@ -117,10 +117,8 @@
                                     {{$product->price}}
                                 </td>
                                 <td class="px-6 py-4">
-
                                     <a href="{{ url('product/' . $product->id . '/edit') }}"
-                                        class="text-black bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br 
-                                               focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                                        class="text-white bg-blue-600 px-5 py-2.5 rounded-lg">
                                         Edit
                                     </a>
                                     <form action="{{ route('product.destroy', $product->id) }}" method="POST"
@@ -129,8 +127,7 @@
                                         @method('delete')
                                         <button type="submit"
                                             onclick="return confirm('Are you sure you want to delete this item?');"
-                                            class="text-black bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br 
-                                               focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5">
+                                            class="text-white bg-red-600 px-4 py-2.5 rounded-lg">
                                             Delete
                                         </button>
                                     </form>
